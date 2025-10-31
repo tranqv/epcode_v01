@@ -1,0 +1,31 @@
+nome = 10
+npar = 10
+g = 0.4
+neiv = 1 
+tole = 0 
+prefix = test
+e = 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+#prep = True 
+ 
+__EOF__ 
+...
+DESCRIPTION:
++ nome: 	Number of single-particle levels
++ npar: 	Number of particles
++ g: 		Pairing strength G (scalar/matrix)
++ neiv: 	Number of eigenvalues to compute
++ tole: 	Numerical tolerance (use tole = 0 for highest precision)
++ prefix: 	Prefix for output filenames
++ e: 		Single-particle energies (in ascending order, units: MeV)
++ prep: 	Pre-processing mode (prep = True estimates the pairing matrix dimensions and exits without computation)
+...

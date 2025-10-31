@@ -1,0 +1,70 @@
+nome = 10  
+npar = 10 
+g =  0.5
+neiv = 1
+tole = 0 
+prefix = test_Ex00
+
+#   e = 1 2 3 4 5 6 7 8 9 10 9.5 10 11 13 
+
+__EOF__ 
+
+DESCRIPTION:
++  nome: Number of levels. 
++  npar: Number of particles
++  g: Pairing strength, which can be a scalar or a (symmetric) matrix.
++  neiv: Number of eigenvalues we want to compute
++  tole: Numerical tolerance in ARPACK (highest precision: tole = 0)
++  prefix: Prefix for output files.
++  e: Single-particle energy (MeV).
+
+NOTES: 
+
++  All defined variables are case-insensitive.
+
++  The program skips all empty lines and reads only valid information.
+
++  If we want to comment inside configuration file, use "#" or "!".
+   --------------------------------
+   - Example: ep_conf1.txt
+   --------------------------------
+
++  To check whether the current computer configuration meets the computational requirements for the given values of nome and npar,
+   the user can enable the "prep = true" flag. 
+   --------------------------------
+   - Example: ep_conf2.txt
+   --------------------------------
+   
++  To define G, i.e., 'g', for the case that G is given as matrix, check 
+   --------------------------------
+   - Example: ep_conf3.txt 
+   --------------------------------
+   - We define G(:,:) element by element. Each line provides one entry in the format: i    j    G(i,j).
+
++  To define single-particle spectra E(:), i.e., 'e', we must provide all list elements in a single row or arranged vertically in a single column.
+   If we intend to define it in subsequent lines, leave the right side of '=' empty. Otherwise, the program may not work properly. 
+   --------------------------------
+   - Example: ep_conf4.txt
+   --------------------------------
+   - If we do not define 'e', the program set E(k) = k, for k = 1,NOME. 
+   
++  To perform calculations for a spherical nucleus, we provide a test case using the realistic nucleus 114Sn, 
+   incorporating experimental single-particle energies and pairing matrix elements V0, check:
+   --------------------------------
+   - Example: ep_conf5.txt
+   --------------------------------
+   
+ + To perform calculations for a spherical nucleus but for G scalar, check:
+   --------------------------------
+   - Example: ep_conf6.txt
+   --------------------------------
+
++  We can set the value of "tole" and see how it effects on the 
+   relative residuals, i.e., ||H@v(k) - lam(k)*v(k)|| / |lam(k)|, 
+   for k = 1, neiv. 
+
++  The configuration process terminates when the program encounters '__EOF__', 
+   as seen on the 10th line above. At that point, it stops reading the file. 
+   If '__EOF__' is not found, the program continues to read the entire file.
+   
++  We can write anything right after '__EOF__'.

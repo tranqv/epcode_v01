@@ -1,0 +1,28 @@
+# we can write comments starting with "#" or  
+! with "!", as in this sentence. 
+# Just put these keywords at the left-most position of wer comment.
+# For examples:
+# this is a comment
+   # this is also a comment
+   ! and so be this 
+
+#  We should define the value of the variable on the right side of the '='. 
+#  If we intend to define it in subsequent lines, leave the right side of 
+#  the '=' empty. Otherwise, the program may not work properly.
+#  For example:
+#  1. nome = 12   OK     
+#  2. nome = 
+#     12          OK     
+#  3. nome = !    error
+
+
+nome = 10 
+npar = 10 
+g = 0.4
+neiv = 2 
+tole = 0
+prefix = test_Ex01
+
+#  Pre-processing only:
+#  prep = True 
+  

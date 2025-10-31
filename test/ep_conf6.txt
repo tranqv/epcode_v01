@@ -1,0 +1,22 @@
+
+# you can define G right here, e.g.:
+# g =  0.9850
+
+states: 1=g7/2   2=d5/2   3=d3/2     4=s1/2 5=h11/2
+
+! single-particle energies for each state in order
+e:
+ -6.121  -5.505  -3.749  -3.891  -3.778
+
+g =  0.9850
+
+npar = 10 
+neiv = 1 
+tole = 0 
+prefix = test_Ex06
+
+
+#  Pre-processing only:
+#  prep = True 
+
+

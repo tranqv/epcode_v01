@@ -1,0 +1,16 @@
+
+nome = 28 
+npar = 28 
+g =  0.4
+neiv = 1 
+tole = 0
+prefix = test
+
+prep = True 
+ 
+__EOF__ 
+
+
+
+
+
